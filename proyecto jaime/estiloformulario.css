@@ -15,18 +15,8 @@
   $border: 5px;
   color: #FFF;
   background: #FFF;
-  background-clip: padding-box; 
-  border: solid $border transparent; 
-  border-radius: 1em;
+
 }
-  &:before {
-    content: '';
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
-    margin: -$border; 
-    border-radius: inherit; 
-    background: linear-gradient(to right, red, orange);
-  }
 body{
   background-image: url('imgs/fondoform.jpg') ;
   background-size: cover;
@@ -62,4 +52,54 @@ body{
 h3{
   font-family: 'Discopia Regular';
 }
-
+div.background{
+  text-align: center;
+  background
+}
+.botonneon{
+  position: relative;
+  padding: 15px 30px;
+  color: #fff;
+  letter-spacing: 3px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  background: #DF61FE;
+}
+.botonneon:hover{
+  background: #6A33FF;
+  box-shadow: 0 0 10px #6A33FF,0 0 40px #6A33FF,0 0 80px #6A33FF;
+  transition-delay: 1s;
+}
+.botonneon span{
+  position: absolute;
+  display: block;
+}
+#span1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background:  linear-gradient(90deg,transparent,#6A33FF);
+}
+.botonneon:hover #span1{
+  left: 100%;
+  transition: 1s;
+}
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background:  linear-gradient(270deg,transparent,#6A33FF);
+}
+.botonneon:hover #span3{
+  right: 100%;
+  transition: 1s;
+}
+.container{
+    margin-left: 15em;
+    margin-right: 15em;
+    background-color: #DAFDFF;
+    box-shadow: 2px 2px 10px 2px
+}
