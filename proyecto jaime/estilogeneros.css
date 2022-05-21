@@ -1,0 +1,48 @@
+body {
+
+}
+video { 
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;    
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+  z-index: -300;
+  visibility: visible;
+}
+img{
+    width: 20em;
+    height: 20em;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+.tipomusica{
+   float:  left;
+
+}
+table{
+    justify-content: center;
+    border: 1px solid white;
+    border-collapse: separate;
+}
+td th{
+    margin: 10px;
+    border-collapse: separate;
+    padding: 10px;
+    border: 1px solid white;
+}
+tr{
+    border: 1px solid white;
+    margin-top: 30em;
+
+}
+#texto{
+    width: auto;
+    height: 100px;
+}
+td{
+    padding: 5em;
+    padding-bottom: 19em;
+}
