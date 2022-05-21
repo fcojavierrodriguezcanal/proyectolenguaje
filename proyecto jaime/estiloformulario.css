@@ -124,7 +124,7 @@ div.background {
     margin-left: 15em;
     margin-right: 15em;
     background-color: transparent;
-    border: 5px solid var( --border-neon-color-pink);
+    border: 5px solid #ffe3fd;
     box-shadow: 0px 0px 20px 8px var( --border-neon-color-shadow-pink),inset 0px 0px 20px 8px var( --border-neon-color-shadow-pink);
     align-items: center;
     flex-direction: column;
