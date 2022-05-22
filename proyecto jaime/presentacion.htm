@@ -1,22 +1,165 @@
 <style>
+    @font-face {
+        src: url('fuente/GrrrDiatype.otf');
+        font-family: 'Diatype';
+    }
 
+    @font-face {
+        src: url('fuente/DiatypeSemi.otf');
+        font-family: 'DiatypeSemi';
+    }
 
-      @font-face {
-            font-family: "Diatype";
-            src: url("/fuentes/grrDiat312ype.ttf") format("ttf"),
-}
-    
+    html {
+        scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        overflow: overlay;
+        -webkit-appearance: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #14f195;
+        ; border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: black;
+    }
+
     body {
-        display:flex;
-        background-color:black;
-
+        overflow-x: hidden;
+        display: flex;
     }
 
-    p {
-        color:white;
+    * {
+        margin: 0 0 0 0;
+    }
+
+    body {
+        margin-top: 10%;
+        background-color: black;
+    }
+
+    p,h1,span {
+        color: white;
         font-family: "Diatype";
-    
     }
-</style>
 
-<p>ABCDFEGHIKL</p>
+    .gradient {
+        background: linear-gradient(90deg, rgba(99,65,214,1) 0%, rgba(186,46,142,1) 74%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .viewport {
+        margin-left: 6%;
+        background-color: transparent;
+    }
+
+    span {
+        color: #14f195 !important;
+        font-size: 70px;
+    }
+
+    h1 {
+        color: #eeeeee;
+        font-size: 70px;
+    }
+
+    .card {
+        display: flex;
+        width: 55%;
+        height: 35%;
+        background-color: #14f195;
+        border-radius: 29px;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 10px 10px 0px 8px #0c7e4f;
+        align-content: center;
+    }
+
+    div > p {
+        font-size: 25px;
+        color: black;
+    }
+
+    .vid {
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        z-index: -1;
+    }
+
+    .__blanklight__ {
+        width: 0;
+        height: 350px;
+    }
+
+    .__blank__ {
+        width: 0;
+        height: 600px;
+    }
+
+     .__blanksuperlight__ {
+        width: 0;
+        height: 200px;
+    }
+    h2 {
+        position: absolute;
+        font-size: 55px;
+        color: #492f9b;
+        font-family: 'DiatypeSemi';
+        color: #14f195;
+        transition: 1s;
+        width: 300px;
+        cursor: pointer;
+    }
+
+    h2:hover {
+        color: #492f9b;
+    }
+
+    /*div > img {
+        margin-top:120px;
+    }*/
+</style>
+<body>
+    <div class="viewport">
+        <div class="vid">
+            <video height="840" autoplay muted>
+                <source src="videos/ring.webm" type="video/webm">
+            </video>
+        </div>
+        <h1 class="gradient">
+            Tracks from the future<br>
+            Powerfull for your mind,<br>
+        </h1>
+        <span class="greenAccent">embracing </span>
+        <h1 class="gradient">for your career</h1>
+        <div class="__blanklight__"></div>
+        <a href="#artists"><h2>SCROLL ↓↓</h2>
+</a>
+        <div class="__blanksuperlight__"></div>
+<h1>
+    Que dicen los  <span class="greenAccent">artistas </span>
+    de nosotros?
+        
+        
+
+
+
+
+</h1>
+<div class="card">
+    <div>
+        <img height=200px src="https://www.pngmart.com/files/5/Skrillex-PNG-HD.png">
+    </div>
+    <div>
+        <p>"Profesionales, todo un placer trabajar con CyberTracks"</p>
+        <a class=""></a>
+    </div>
+</div>
+<div id="artists"></div>
+</div></body>
