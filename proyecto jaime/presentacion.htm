@@ -1,165 +1,460 @@
-<style>
-    @font-face {
-        src: url('fuente/GrrrDiatype.otf');
-        font-family: 'Diatype';
-    }
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                src: url('fuente/GrrrDiatype.otf');
+                font-family: 'Diatype';
+            }
 
-    @font-face {
-        src: url('fuente/DiatypeSemi.otf');
-        font-family: 'DiatypeSemi';
-    }
+            @font-face {
+                src: url('fuente/DiatypeSemi.otf');
+                font-family: 'DiatypeSemi';
+            }
 
-    html {
-        scroll-behavior: smooth;
-    }
+            :root {
+                --border-neon-color-pink: #ffe3fd;
+                --border-neon-color-purple: #ffe3fd;
+                --border-neon-color-shadow-pink: #ba2e8e;
+                --border-neon-color-shadow-purple: #6341d6;
+            }
 
-    ::-webkit-scrollbar {
-        width: 10px;
-        overflow: overlay;
-        -webkit-appearance: none;
-    }
+            * {
+                margin: 0 0 0 0;
+            }
 
-    ::-webkit-scrollbar-thumb {
-        background: #14f195;
-        ; border-radius: 10px;
-    }
+            html {
+                -webkit-font-smoothing: antialiased;
+                scroll-behavior: smooth;
+                height: 100%;
+                width: 100%;
+            }
 
-    ::-webkit-scrollbar-track-piece {
-        background-color: black;
-    }
+            body {
+                overflow-x: hidden;
+            
+                margin-top: 7%;
+                background-color: black;
+            }
 
-    body {
-        overflow-x: hidden;
-        display: flex;
-    }
+            p,h1,span {
+                color: white;
+                font-family: "Diatype";
+            }
 
-    * {
-        margin: 0 0 0 0;
-    }
+            .text {
+                color: white;
+                font-size: 1.3vw
+            }
 
-    body {
-        margin-top: 10%;
-        background-color: black;
-    }
+            p {
+                color: white;
+            }
 
-    p,h1,span {
-        color: white;
-        font-family: "Diatype";
-    }
+            .gradient {
+                background: linear-gradient(90deg, rgba(99,65,214,1) 0%, rgba(186,46,142,1) 74%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    .gradient {
-        background: linear-gradient(90deg, rgba(99,65,214,1) 0%, rgba(186,46,142,1) 74%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+            #gradientShowcase {
+                background: rgb(239,202,139);
+                background: linear-gradient(90deg, rgba(239,202,139,1) 0%, rgba(201,102,77,1) 11%, rgba(224,117,195,1) 16%, rgba(177,72,201,1) 30%, rgba(138,86,234,1) 41%, rgba(34,10,160,1) 86%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    .viewport {
-        margin-left: 6%;
-        background-color: transparent;
-    }
+            #gradientShowcase2 {
+                background: rgb(130,46,97);
+                background: linear-gradient(90deg, rgba(130,46,97,1) 0%, rgba(231,23,80,1) 86%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    span {
-        color: #14f195 !important;
-        font-size: 70px;
-    }
+            #gradientShowcase3 {
+                background: rgb(87,255,57);
+                background: linear-gradient(90deg, rgba(87,255,57,1) 0%, rgba(255,189,19,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    h1 {
-        color: #eeeeee;
-        font-size: 70px;
-    }
+            .viewport {
+                margin-left: 6%;
+                margin-right: 6%;
+                background-color: transparent;
+            }
 
-    .card {
-        display: flex;
-        width: 55%;
-        height: 35%;
-        background-color: #14f195;
-        border-radius: 29px;
-        flex-direction: row;
-        align-items: center;
-        box-shadow: 10px 10px 0px 8px #0c7e4f;
-        align-content: center;
-    }
+            span:not(.normal) {
+                color: #14f195 !important;
+                font-size: 70px;
+            }
 
-    div > p {
-        font-size: 25px;
-        color: black;
-    }
+            h1 {
+                color: #eeeeee;
+                font-size: 70px;
+            }
 
-    .vid {
-        position: absolute;
-        top: 15%;
-        left: 25%;
-        z-index: -1;
-    }
+            .card {
+                display: flex;
+                background-color: #14f195;
+                border-radius: 29px;
+                flex-direction: row;
+                align-items: center;
+                box-shadow: 10px 10px 0px 8px #0c7e4f;
+                align-content: center;
+                width: 100%;
+                height: 13vw;
+                transition: 0.7s;
+            }
 
-    .__blanklight__ {
-        width: 0;
-        height: 350px;
-    }
+            div > p {
+                font-size: 25px;
+                color: black;
+            }
 
-    .__blank__ {
-        width: 0;
-        height: 600px;
-    }
+            .vid {
+                position: absolute;
+                top: 15%;
+                left: 25%;
+                z-index: -1;
+            }
 
-     .__blanksuperlight__ {
-        width: 0;
-        height: 200px;
-    }
-    h2 {
-        position: absolute;
-        font-size: 55px;
-        color: #492f9b;
-        font-family: 'DiatypeSemi';
-        color: #14f195;
-        transition: 1s;
-        width: 300px;
-        cursor: pointer;
-    }
+            h2 {
+                font-size: 55px;
+                color: #492f9b;
+                font-family: 'DiatypeSemi';
+                color: #14f195;
+                transition: 1s;
+                width: 300px;
+                cursor: pointer;
+            }
 
-    h2:hover {
-        color: #492f9b;
-    }
+            .cardContainer, .cardclassnameanimation {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 45px;
+                grid-row-gap: 30px;
+            }
 
-    /*div > img {
-        margin-top:120px;
-    }*/
-</style>
-<body>
-    <div class="viewport">
-        <div class="vid">
-            <video height="840" autoplay muted>
-                <source src="videos/ring.webm" type="video/webm">
-            </video>
+            .cardclassnameanimation {
+                animation: 1s slide;
+            }
+
+            .cardContainerShowcase {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 45px;
+                grid-row-gap: 30px;
+                border: 4px solid #FFE2FF;
+                box-shadow: 0px 0px 20px 8px #BA2E8E,inset 0px 0px 20px 8px #BA2E8E;
+            }
+
+            #cardShowcaseContainer {
+                display: flex;
+                background: #0c090900;
+                justify-content: space-around;
+            }
+
+            #cardShowcaseContainer > .card {
+                display: flex;
+                background: #181818;
+                width: 25%;
+                height: 33vw;
+                box-shadow: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .card > img {
+                height: 10vw;
+            }
+
+            .card > p {
+                font-size: 1.2vw;
+                color: #000000;
+                margin-right: 2%;
+            }
+
+            #cardShowcaseContainer > .card > p {
+                color: red;
+                font-size: 3.2vw;
+            }
+
+            img {
+                margin-left: 2%;
+            }
+
+            .joinUs {
+                display: flex;
+                width: 26vw;
+                height: 20vw;
+                background: #000000;
+                border-radius: 2px;
+                border-radius: 2px;
+                border: 4px solid #FFE2FF;
+                box-shadow: 0px 0px 20px 8px #BA2E8E,inset 0px 0px 20px 8px #BA2E8E;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .top {
+                cursor: pointer;
+                top: 90%;
+                left: 96%;
+                position: fixed;
+                display: flex;
+                width: 50px;
+                height: 50px;
+                border: 1px dotted #14f195;
+                transition: 0.4s;
+                justify-content: center ;
+                align-items: center;
+            }
+
+            .top > p {
+                transition: 0.4s;
+                color: #14f195;
+            }
+
+            .top:hover {
+                border: 1px solid #492f9b;
+                color: #492f9b;
+            }
+
+            .top:hover > p {
+                color: #492f9b;
+            }
+
+            .botonneon {
+                z-index: 1;
+                position: relative;
+                padding: 15px 30px;
+                color: #fff;
+                letter-spacing: 3px;
+                text-decoration: none;
+                overflow: hidden;
+                transition: 1s;
+                background: transparent;
+                backdrop-filter: blur(2px);
+                border: 3px solid #e8e4fe;
+                box-shadow: 0px 0px 20px 8px var( --border-neon-color-shadow-purple), inset 0px 0px 20px 8px var( --border-neon-color-shadow-purple);
+            }
+
+            .botonneon:hover {
+                transform: scale(1.3);
+                -webkit-border-radius: 0px;
+            }
+
+            .__blanklight__ {
+                width: 0;
+                height: 450px;
+            }
+
+            .__blank__ {
+                width: 0;
+                height: 600px;
+            }
+
+            .__blanksuperlight__ {
+                width: 0;
+                height: 250px;
+            }
+
+            h2:hover {
+                color: #492f9b;
+            }
+
+            .card:hover {
+                background-color: #ad88ff;
+                box-shadow: 10px 10px 0px 8px #6c579b;
+            }
+
+            .card:nth-child(n + 4) {
+                background: #ad88ff;
+                box-shadow: 10px 10px 0px 8px #6c579b;
+            }
+
+            .card:nth-child(n + 4): hover {
+                background-color: #14f195;
+                box-shadow: 10px 10px 0px 8px #0c7e4f;
+            }
+.footer {
+            background:red;
+            width:100%;
+            height:20%;
+            display:flex;
+align-items: center;justify-content: space-around;}
+            ::-webkit-scrollbar {
+                width: 10px;
+                -webkit-appearance: none;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #14f195;
+                ; border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-track-piece {
+                background-color: black;
+            }
+
+            @keyframes slide {
+                from {
+                    padding-top: 25%;
+                }
+
+                to {
+                    padding-top: 0px;
+                }
+            }
+        </style>
+        <script>
+            function anim() {
+                window.scrollTo(0, 1100);
+                document.getElementById('cardcontainer').className = 'cardclassnameanimation';
+
+            }
+
+            function anim2() {
+                window.scrollTo(0, 2100);
+                document.getElementById('cardcontainer').className = 'cardclassnameanimation';
+
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="top">
+            <p>↑</p>
         </div>
-        <h1 class="gradient">
-            Tracks from the future<br>
-            Powerfull for your mind,<br>
-        </h1>
-        <span class="greenAccent">embracing </span>
-        <h1 class="gradient">for your career</h1>
-        <div class="__blanklight__"></div>
-        <a href="#artists"><h2>SCROLL ↓↓</h2>
-</a>
-        <div class="__blanksuperlight__"></div>
-<h1>
-    Que dicen los  <span class="greenAccent">artistas </span>
-    de nosotros?
-        
-        
-
-
-
-
-</h1>
-<div class="card">
-    <div>
-        <img height=200px src="https://www.pngmart.com/files/5/Skrillex-PNG-HD.png">
-    </div>
-    <div>
-        <p>"Profesionales, todo un placer trabajar con CyberTracks"</p>
-        <a class=""></a>
-    </div>
-</div>
-<div id="artists"></div>
-</div></body>
+        <div class="viewport">
+            <div class="vid">
+                <video height="840" autoplay muted>
+                    <source src="videos/ring.webm" type="video/webm">
+                </video>
+            </div>
+            <h1 class="gradient">
+                Tracks from the future<br>
+                Powerfull for your mind,<br>
+            </h1>
+            <span class="greenAccent">embracing </span>
+            <h1 class="gradient">for your career</h1>
+            <div class="__blanklight__"></div>
+            <a>
+                <h2 onclick="anim()">SCROLL ↓↓</h2>
+            </a>
+            <div class="__blanksuperlight__"></div>
+            <h1>
+                Que dicen los  <span class="greenAccent">artistas </span>
+                de nosotros?
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </h1>
+            <br>
+            <br>
+            <br>
+            <div class="cardContainer" id="cardcontainer">
+                <div class="card">
+                    <img src="imgs/skrillex.png">
+                    <p>Profesionales, todo un placer trabajar con CyberTracks</p>
+                </div>
+                <div class="card">
+                    <img src="imgs/jungcook.png">
+                    <p>진짜 번역했네
+그럼 좋은 하루 되시기 바랍니다!"</p>
+                </div>
+                <div class="card">
+                    <img src="imgs/kshmr.png">
+                    <p>"حقا لقد قمت بترجمة هذا
+حسنًا ، أتمنى لك يومًا سعيدًا!😄"</p>
+                </div>
+                <div class="card">
+                    <img src="imgs/psy.img">
+                    <p>예수 그리스도는 우리의 구주입니다🤯!</p>
+                </div>
+                <div class="card">
+                    <img src="https://variety.com/wp-content/uploads/2017/09/justin_bieber.png?w=1024">
+                    <p>A pleasure to working with em', would recommend 11/10!</p>
+                </div>
+                <div class="card">
+                    <img src="https://gaceta.es/wp-content/uploads/2021/01/Opinion-Santiago-Abascal-265.png">
+                    <p>من دواعي سروري العمل معهم!</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center>
+                <h2 onclick="anim2()">BENEFICIOS↓↓</h2>
+            </center>
+            <div class="__blanksuperlight__ "></div>
+            <div class="cardcontainer" id="cardShowcaseContainer">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lock-dynamic-gradient.png/480px-Lock-dynamic-gradient.png">
+                    <p id="gradientShowcase">Seguridad</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lock-dynamic-gradient.png/480px-Lock-dynamic-gradient.png">
+                    <p id="gradientShowcase2">Alcance</p>
+                </div>
+                <div class="card">
+                    <img src="imgs/jungcook.png">
+                    <p id="gradientShowcase3">Compromiso</p>
+                </div>
+            </div>
+            <div class="__blanksuperlight__"></div>
+            <h1>Por artistas,para artistas</h1>
+            <br>
+            <center>
+                <p class="text">
+                    En CyberTracks tenemos una filosofia abierta e inclusiva, te invitamos a trabajar con nosotros independientemente de tu condicion. Adicionalmente poseemos un entorno de trabajo <span class="normal">amigable</span>
+                </p>
+                <img height=400 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/695c02e1-701f-492c-b282-fb4dbfd832f9/dcm5pbu-0124b5f2-d359-46fb-8225-07513fcf923d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY5NWMwMmUxLTcwMWYtNDkyYy1iMjgyLWZiNGRiZmQ4MzJmOVwvZGNtNXBidS0wMTI0YjVmMi1kMzU5LTQ2ZmItODIyNS0wNzUxM2ZjZjkyM2QucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-vQHDEohUQCW4WDv7RaOvppGBDmp42hwiMPFRxckZY4">
+            </center>
+            <div class="__blanksuperlight__"></div>
+            <center>
+                <h2 onclick="anim2()">Join us↓↓</h2>
+            </center>
+            <br><br><br><br>
+            <center>
+                <div class="joinUs">
+                    <h1>Unete!</h1>
+                    <span class="normal">Rellena nuestro formulario y trabaja con nosotros!</span>
+                    <form>
+                        <input class="botonneon" type="submit" value="¡ME APUNTO!">
+                    </form>
+                </div>
+            </center>
+  <div class="__blanklight__"></div>
+            <br>
+        </div>
+                 <footer>
+                <div class="footer"><div><p class="normal">11111111</p></div><div>2</div><div>3</div></div>
+            </footer>
+    </body>
+</html>
