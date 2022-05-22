@@ -32,9 +32,12 @@
 
             body {
                 overflow-x: hidden;
-            
                 margin-top: 7%;
                 background-color: black;
+            }
+
+            h1 {
+                animation: 1s iluminacionborde;
             }
 
             p,h1,span {
@@ -281,12 +284,16 @@
                 background-color: #14f195;
                 box-shadow: 10px 10px 0px 8px #0c7e4f;
             }
-.footer {
-            background:red;
-            width:100%;
-            height:20%;
-            display:flex;
-align-items: center;justify-content: space-around;}
+
+            .footer {
+                background: red;
+                width: 100%;
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+
             ::-webkit-scrollbar {
                 width: 10px;
                 -webkit-appearance: none;
@@ -308,6 +315,23 @@ align-items: center;justify-content: space-around;}
 
                 to {
                     padding-top: 0px;
+                }
+            }
+
+            @keyframes iluminacion {
+                0% {
+                    color: #8E13B9;
+                    text-shadow: 5px 5px 17px #BF08FF;
+                }
+
+                50% {
+                    color: #ffe3fd;
+                    text-shadow: 5px 5px 17px #FA9CF8;
+                }
+
+                100% {
+                    color: #8E13B9;
+                    text-shadow: 5px 5px 17px #BF08FF;
                 }
             }
         </style>
@@ -371,6 +395,7 @@ align-items: center;justify-content: space-around;}
             
             
             
+            
             </h1>
             <br>
             <br>
@@ -386,7 +411,7 @@ align-items: center;justify-content: space-around;}
 그럼 좋은 하루 되시기 바랍니다!"</p>
                 </div>
                 <div class="card">
-                    <img src="imgs/kshmr.png">
+                    <img src="">
                     <p>"حقا لقد قمت بترجمة هذا
 حسنًا ، أتمنى لك يومًا سعيدًا!😄"</p>
                 </div>
@@ -434,13 +459,18 @@ align-items: center;justify-content: space-around;}
                 <p class="text">
                     En CyberTracks tenemos una filosofia abierta e inclusiva, te invitamos a trabajar con nosotros independientemente de tu condicion. Adicionalmente poseemos un entorno de trabajo <span class="normal">amigable</span>
                 </p>
-                <img height=400 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/695c02e1-701f-492c-b282-fb4dbfd832f9/dcm5pbu-0124b5f2-d359-46fb-8225-07513fcf923d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY5NWMwMmUxLTcwMWYtNDkyYy1iMjgyLWZiNGRiZmQ4MzJmOVwvZGNtNXBidS0wMTI0YjVmMi1kMzU5LTQ2ZmItODIyNS0wNzUxM2ZjZjkyM2QucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-vQHDEohUQCW4WDv7RaOvppGBDmp42hwiMPFRxckZY4">
+                 <video height="400" autoplay muted>
+                    <source src="videos/onichan.mp4" type="video/mp4">
+                </video>
             </center>
             <div class="__blanksuperlight__"></div>
             <center>
                 <h2 onclick="anim2()">Join us↓↓</h2>
             </center>
-            <br><br><br><br>
+            <br>
+            <br>
+            <br>
+            <br>
             <center>
                 <div class="joinUs">
                     <h1>Unete!</h1>
@@ -450,11 +480,17 @@ align-items: center;justify-content: space-around;}
                     </form>
                 </div>
             </center>
-  <div class="__blanklight__"></div>
+            <div class="__blanklight__"></div>
             <br>
         </div>
-                 <footer>
-                <div class="footer"><div><p class="normal">11111111</p></div><div>2</div><div>3</div></div>
-            </footer>
+        <footer>
+            <div class="footer">
+                <div>
+                    <p class="normal">11111111</p>
+                </div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </footer>
     </body>
 </html>

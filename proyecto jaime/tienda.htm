@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face {
+                font-family: "Linotte";
+                src: url('fuente/Linotte Regular.otf') format('truetype');
+            }
+
+            @font-face {
+                font-family: "citation";
+                src: url('fuente/citation.otf') format('truetype');
+            }
+
+            @font-face {
+                src: url('fuente/GrrrDiatype.otf');
+                font-family: 'Diatype';
+            }
+
+            @font-face {
+                src: url('fuente/DiatypeSemi.otf');
+                font-family: 'DiatypeSemi';
+            }
+
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap'); * {
+                margin: 0;
+                text-decoration: none;
+            }
+
+            :root {
+                --border-neon-color-pink: #ffe3fd;
+                --border-neon-color-purple: #ffe3fd;
+                --border-neon-color-shadow-pink: #1f0f27;
+                --border-neon-color-shadow-purple: #6341d6;
+            }
+
+            body {
+                background: #1f0f27;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 7vw;
+                font-family: "citation";
+            }
+
+            p,h1,span {
+                color: white;
+                font-family: "citation";
+            }
+
+            .gradient {
+                background: linear-gradient(90deg, rgba(99,65,214,1) 0%, rgba(186,46,142,1) 74%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+                font-family: 'Raleway', sans-serif;
+            }
+
+            .selector {
+                width: 80%;
+                height: 1.3vw;
+                display: flex;
+                border: 1px solid #843fa6;
+                justify-content: space-around;
+                align-items: center;
+                border-radius: 5px;
+            }
+
+            #gradientShowcase {
+                background: rgb(239,202,139);
+                background: linear-gradient(90deg, rgba(239,202,139,1) 0%, rgba(201,102,77,1) 11%, rgba(224,117,195,1) 16%, rgba(177,72,201,1) 30%, rgba(138,86,234,1) 41%, rgba(34,10,160,1) 86%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            #gradientShowcase2 {
+                background: rgb(130,46,97);
+                background: linear-gradient(90deg, rgba(130,46,97,1) 0%, rgba(231,23,80,1) 86%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            #gradientShowcase3 {
+                background: rgb(87,255,57);
+                background: linear-gradient(90deg, rgba(87,255,57,1) 0%, rgba(255,189,19,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+                -webkit-appearance: none;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #843fa6;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-track-piece {
+                background-color: black;
+            }
+
+            @keyframes iluminacion {
+                0% {
+                    color: #8E13B9;
+                    text-shadow: 5px 5px 17px #BF08FF;
+                }
+
+                50% {
+                    color: #ffe3fd;
+                    text-shadow: 5px 5px 17px #FA9CF8;
+                }
+
+                100% {
+                    color: #8E13B9;
+                    text-shadow: 5px 5px 17px #BF08FF;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            iframe {
+                border: 0;
+                height: 33vw;
+                width: 80%;
+            }
+
+            .wrapper {
+                display: block;
+                position: relative;
+                z-index: 1;
+                height: 100%;
+                width: 80vw;
+            }
+
+            .wrapper::before {
+                content: '';
+                position: absolute;
+                box-shadow: inset 0px 0px 10px 18px #1f0f27;
+                z-index: 2;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                pointer-events: none;
+            }
+        </style>
+        <script>
+            function anim() {
+                window.scrollTo(0, 1100);
+                document.getElementById('cardcontainer').className = 'cardclassnameanimation';
+
+            }
+
+            function anim2() {
+                window.scrollTo(0, 2100);
+                document.getElementById('cardcontainer').className = 'cardclassnameanimation';
+
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="viewport"></div>
+        <center>
+            <h1 class="gradient">Tienda</h1>
+        </center>
+        <div class="selector">
+            <a href="altavoces.htm " target=viewport>
+                <p>Altavoces</p>
+            </a>
+            <a href="google.com " target=viewport>
+                <p>Instrumentos</p>
+            </a>
+            <a href="google.com " target=viewport>
+                <p>Discos</p>
+            </a>
+        </div>
+        <br>
+        <br>
+        <center>
+            <div class="wrapper">
+                <iframe src="gif.htm" name="viewport"></iframe>
+            </div>
+        </center>
+    </body>
+</html>
