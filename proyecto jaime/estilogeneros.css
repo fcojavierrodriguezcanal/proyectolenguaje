@@ -1,6 +1,14 @@
-body {
-
+@font-face{
+font-family: "Linotte";
+src: url('fuente/Linotte Regular.otf') format('truetype');
 }
+@font-face{
+font-family: "citation";
+src: url('fuente/citation.otf') format('truetype');
+}
+body {
+cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur94.cur), auto !important;}
+
 video { 
   min-width: 100%;
   min-height: 100%;
@@ -17,6 +25,7 @@ img{
     align-items: center;
     display: flex;
     margin: auto;
+    border-radius: 50%;
 }
 .tipomusica{
    float:  left;
@@ -26,23 +35,123 @@ table{
     justify-content: center;
     border: 1px solid white;
     border-collapse: separate;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 8em;
+    background-image: url("imgs/fondotabla.jpg");
+    background-position: cover;
+    border-radius: 20px;
+    border: 4px solid purple;
+    animation-name: iluminacionborde;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
-td th{
+td,th{
     margin: 10px;
     border-collapse: separate;
-    padding: 10px;
-    border: 1px solid white;
+    padding: 5em;
+    padding-bottom: 19em;
 }
 tr{
-    border: 1px solid white;
     margin-top: 30em;
+
 
 }
 #texto{
     width: auto;
     height: 100px;
 }
-td{
-    padding: 5em;
-    padding-bottom: 19em;
+.drill{
+    padding-top: 0.5em;
+}
+p{
+    font-family: "Linotte";
+    font-size: 20px;
+    color: #ffe3fd;
+    text-shadow: 5px 5px 17px #BF08FF;
+    text-align: center;
+}
+h1{
+    animation-name: iluminacion, iluminacionborde;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: "citation";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    border-top: 5px solid purple;
+    border-bottom: 5px solid purple;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    animation-name: iluminacion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: "Linotte";
+    text-transform: uppercase;
+    text-align: center;
+}
+@keyframes iluminacion  {
+  0% {
+    color: #8E13B9;
+    text-shadow: 5px 5px 17px #BF08FF;
+  }
+  50% {
+    color: #ffe3fd;
+    text-shadow: 5px 5px 17px #FA9CF8;
+  }
+ 100%{
+    color: #8E13B9;
+    text-shadow: 5px 5px 17px #BF08FF;
+ }
+}
+
+@keyframes iluminacionimagen  {
+    0%{
+        border: none;
+    }
+  25% {
+    border-color: #ffe3fd;
+    box-shadow: 0px 0px 5px 10px #FA9CF8;
+  }
+  50% {
+    border-color: #8E13B9;
+    box-shadow: 0px 0px 5px 10px #BF08FF;
+  }
+    75%{
+    border-color: #ffe3fd;
+    box-shadow: 0px 0px 5px 10px #FA9CF8;
+ }
+ 100%´{
+    border: none;
+ }
+}
+@keyframes iluminacionborde {
+
+   0% {
+    border-color: #8E13B9;
+    
+  }
+  50% {
+    border-color: #ffe3fd;
+    
+  }
+ 100%{
+    border-color: #8E13B9;
+    
+ }
+
+}
+.estiloimagen:hover{
+    animation-name: iluminacionimagen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius:50%;
+    animation-delay: 0.5s;
+}
+img .estiloimagen{
+    border-radius:20%;
 }
