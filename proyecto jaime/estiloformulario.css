@@ -32,7 +32,6 @@ label {
 }
 
 body {
-    display: flex;
      backdrop-filter: blur(2px);
     background-image: url('imgs/fondoform.jpg') ;
     background-size: cover;

@@ -1,0 +1,77 @@
+
+body {
+
+     backdrop-filter: blur(2px);
+    background-image: url('imgs/fondoform.jpg') ;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-family: "Linotte";
+    font-size: 20px;
+    color: #ffe3fd;
+    text-shadow: 5px 5px 17px #BF08FF;
+    text-align: center;
+}
+.view {
+
+ }
+.agotado{
+    display: inline-flex;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+p{
+    font-size: 60px;
+}
+.texto{
+    padding: 10%;
+}
+.video{
+    padding-top: 50%;
+}
+h1{
+     animation-name: iluminacion, iluminacionborde;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: "citation";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    border-top: 5px solid purple;
+    border-bottom: 5px solid purple;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+@keyframes iluminacion  {
+  0% {
+    color: #8E13B9;
+    text-shadow: 5px 5px 17px #BF08FF;
+  }
+  50% {
+    color: #ffe3fd;
+    text-shadow: 5px 5px 17px #FA9CF8;
+  }
+ 100%{
+    color: #8E13B9;
+    text-shadow: 5px 5px 17px #BF08FF;
+ }
+}
+@keyframes iluminacionborde {
+
+   0% {
+    border-color: #8E13B9;
+    
+  }
+  50% {
+    border-color: #ffe3fd;
+    
+  }
+ 100%{
+    border-color: #8E13B9;
+    
+ }
