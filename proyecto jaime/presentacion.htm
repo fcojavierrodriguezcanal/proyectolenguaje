@@ -13,7 +13,7 @@
             }
 
             :root {
-                --border-neon-color-pink: #ffe3fd;
+                --border-neon-color-pink: #562ddc;
                 --border-neon-color-purple: #ffe3fd;
                 --border-neon-color-shadow-pink: #ba2e8e;
                 --border-neon-color-shadow-purple: #6341d6;
@@ -69,15 +69,15 @@
             }
 
             #gradientShowcase2 {
-                background: rgb(130,46,97);
-                background: linear-gradient(90deg, rgba(130,46,97,1) 0%, rgba(231,23,80,1) 86%);
+                background: rgb(130 46 97);
+                background: linear-gradient(90deg, rgba(130,46,97,1) 0%, hsl(344deg 82% 50%) 86%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
 
             #gradientShowcase3 {
                 background: rgb(87,255,57);
-                background: linear-gradient(90deg, rgba(87,255,57,1) 0%, rgba(255,189,19,1) 100%);
+                background: linear-gradient(90deg, rgba(87,255,57,1) 0%, hsl(43deg 100% 54%) 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -91,6 +91,18 @@
             span:not(.normal) {
                 color: #14f195 !important;
                 font-size: 70px;
+            }
+
+            .normal2 {
+                font-size: 15px;
+                font-family: 'DiatypeSemi';
+                color: white;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            .normal2:hover {
+                color: #14f195
             }
 
             h1 {
@@ -171,6 +183,10 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
+            }
+
+            img {
+                cursor: pointer;
             }
 
             .card > img {
@@ -282,18 +298,21 @@
                 box-shadow: 10px 10px 0px 8px #6c579b;
             }
 
-            .card:nth-child(n + 4): hover {
+            .card:nth-child(n + 4):hover {
                 background-color: #14f195;
                 box-shadow: 10px 10px 0px 8px #0c7e4f;
             }
 
             .footer {
-                background: red;
+                background: black;
                 width: 100%;
-                height: 20%;
+                height: 10vw;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                flex-direction: row;
+                border-top: 4px solid #E9DFFF;
+                box-shadow: 0px 0px 20px 8px #5E4BDC;
             }
 
             ::-webkit-scrollbar {
@@ -308,6 +327,12 @@
 
             ::-webkit-scrollbar-track-piece {
                 background-color: black;
+            }
+
+            h3 {
+                font-family: "Diatype";
+                color: white;
+                margin-bottom: 10px;
             }
 
             @keyframes slide {
@@ -336,6 +361,40 @@
                     text-shadow: 5px 5px 17px #BF08FF;
                 }
             }
+
+            .footer > div {
+                height: 100%;
+                width: 25%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                align-content: center;
+            }
+
+            .flex2hr {
+                display: flex !important;
+                flex-direction: row !important;
+            }
+
+            .flex2hr > img {
+                height: 50px;
+                transition: 0.5s;
+            }
+
+            .flex2hr > img:hover {
+                transform: scale(1.2)
+            }
+
+            .empresa {
+                border-left: 2px dotted white;
+            }
+
+            .paginas {
+                border-right: 2px dotted white;
+            }
+         
+          
         </style>
         <script>
             function anim() {
@@ -376,6 +435,21 @@
             <h1>
                 Que dicen los  <span class="greenAccent">artistas </span>
                 de nosotros?
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -488,11 +562,26 @@
         </div>
         <footer>
             <div class="footer">
-                <div>
-                    <p class="normal">11111111</p>
+                <div class="paginas">
+                    <h3>Paginas</h3>
+                    <p class="normal2">Inicio</p>
+                    <p class="normal2">Playlist</p>
+                    <p class="normal2">Tienda</p>
+                    <p class="normal2">Generos</p>
+                    <p class="normal2">Presentacion</p>
                 </div>
-                <div>2</div>
-                <div>3</div>
+                <div class="flex2hr">
+                    <img src="imgs/github.png">
+                    <img src="imgs/twitter.png">
+                    <img src="imgs/LI.png">
+                </div>
+                <div class="empresa">
+                    <h3>Empresa</h3>
+                    <p class="normal2">Aviso legal</p>
+                    <p class="normal2">Condiciones del servicio</p>
+                    <p class="normal2">Terminos de usuario final</p>
+                    <p class="normal2">Trabaja con nosotros</p>
+                </div>
             </div>
         </footer>
     </body>
