@@ -42,13 +42,28 @@
             }
 
             h1 {
+                margin-top: 100px;
                 font-size: 7vw;
                 font-family: "citation";
             }
 
+            a > div {
+                width: 8vw;
+                background: #31183e;
+                display: flex;
+                height: 1.7vw;
+                align-items: center;
+                justify-content: center;
+                border-radius: 19px;
+                transition: 1s;
+            }
+
+            a > div:hover {
+                background: #632f7e;
+            }
+
             p,h1,span {
                 color: white;
-                font-family: "citation";
             }
 
             .gradient {
@@ -59,13 +74,14 @@
 
             p {
                 font-family: 'Raleway', sans-serif;
+                font-weight: 600;
             }
 
             .selector {
                 width: 80%;
-                height: 1.3vw;
+                height: 2.6vw;
                 display: flex;
-                border: 1px solid #843fa6;
+                background: #1f0f27;
                 justify-content: space-around;
                 align-items: center;
                 border-radius: 5px;
@@ -176,13 +192,19 @@
         </center>
         <div class="selector">
             <a href="altavoces.htm " target=viewport>
-                <p>Altavoces</p>
+                <div>
+                    <p>Altavoces</p>
+                </div>
             </a>
             <a href="google.com " target=viewport>
-                <p>Instrumentos</p>
+                <div>
+                    <p>Instrumentos</p>
+                </div>
             </a>
             <a href="google.com " target=viewport>
-                <p>Discos</p>
+                <div>
+                    <p>Discos</p>
+                </div>
             </a>
         </div>
         <br>
