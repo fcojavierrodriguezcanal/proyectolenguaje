@@ -33,6 +33,11 @@ p{
 .video{
     padding-top: 50%;
 }
+video{
+    animation-name: iluminacionborde;
+    border-radius: 50%;
+    border: 3px solid purple;
+}
 h1{
      animation-name: iluminacion, iluminacionborde;
     animation-duration: 3s;
@@ -46,6 +51,7 @@ h1{
     border-bottom: 5px solid purple;
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: 5%;
 }
 @keyframes iluminacion  {
   0% {
@@ -75,3 +81,4 @@ h1{
     border-color: #8E13B9;
     
  }
+
